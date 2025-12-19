@@ -1,0 +1,162 @@
+/* --- Reset & Base --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden; 
+  background-color: #eef9f3; /* Fond doux vert clair */
+}
+
+/* --- Layout Principal --- */
+.auth-page {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d4edda; /* Vert pâle */
+  position: relative;
+  padding: 40px;
+}
+
+/* --- Conteneur Central --- */
+.auth-content {
+  width: 100%;
+  max-width: 460px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 10;
+  margin: auto;
+}
+
+/* --- En-tête (Titres) --- */
+.title-container {
+  text-align: center;
+  color: #28a745; 
+}
+
+.title-container h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.app-name {
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #218838; /* Vert foncé */
+}
+
+/* --- La Boîte (Auth Box) --- */
+.auth-box {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem 2.5rem; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.auth-box:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Titres de formulaire --- */
+.form-title {
+  color: #28a745;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Formulaire --- */
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.form-input {
+  width: 100%;
+  background: #f9f9f9;
+  border-radius: 8px;
+  color: #333;
+  outline: none;
+  font-weight: 500;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  border-color: #28a745;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.1);
+}
+
+/* --- Bouton Submit (Modifié : Vert au lieu de Rouge) --- */
+.submit-btn {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #28a745; /* Changé pour le vert */
+  padding: 0.85rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.submit-btn:hover {
+  background: #218838; /* Vert plus foncé au survol */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(33, 136, 56, 0.2);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* --- Toggle Text & Link (Ajouté) --- */
+.toggle-text {
+  text-align: center;
+  color: #666;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.toggle-link {
+  margin-left: 5px; /* Équivalent au style inline que vous aviez */
+  color: #28a745;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.toggle-link:hover {
+  color: #218838;
+  text-decoration: underline;
+}
+
+/* --- Footer --- */
+.matrix-footer {
+  text-align: center;
+  color: #777;
+  font-size: 0.85rem;
+  margin-top: 1rem; 
+}
