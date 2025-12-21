@@ -168,7 +168,7 @@ animation: fadeIn 0.8s ease-out;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  background: linear-gradient(135deg, #9919b3, #821098);
   padding: 1rem;
   margin-top: 1rem;
   font-size: 1rem;

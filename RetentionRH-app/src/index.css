@@ -1,9 +1,9 @@
 
 :root {
   /* NOUVELLE PALETTE VIOLETTE */
-  --primary: #8b5cf6;       /* Violet vibrant */
-  --primary-dark: #7c3aed;  /* Violet foncé */
-  --primary-light: #a78bfa; /* Violet clair / Lilas */
+  --primary: #9919b3;       
+  --primary-dark: #96119f;  
+  --primary-light: #b250dc; 
   
   --danger: #ef4444;
   --warning: #f59e0b;
