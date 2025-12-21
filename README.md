@@ -9,21 +9,20 @@
 **RetentionAI** est une interface web moderne destinée aux directions des Ressources Humaines. Elle permet d'anticiper les départs volontaires des collaborateurs en s'appuyant sur des modèles de Machine Learning et de générer des plans de rétention grâce à l'Intelligence Artificielle.
 
 ##  Fonctionnalités clés
-*   **Authentification RH** : Accès sécurisé via JWT (Login/Logout).
+*   **Authentification RH** : Accès sécurisé via JWT (Login/Register).
 *   **Saisie de Profil Employé** : Formulaire complet regroupant les indicateurs clés (satisfaction, ancienneté, charge de travail, salaire, etc.).
 *   **Tableau de bord de Prédiction** : 
     *   Visualisation du score de risque de démission (probabilité en %).
-    *   Indicateur visuel de criticité (Faible, Moyen, Élevé).
-*   **IA Générative** : Affichage automatique d'un plan de rétention personnalisé si le risque est détecté comme élevé.
+*   **IA Générative** : Affichage automatique d'un plan de rétention personnalisé si le risque est détecté comme élevé (> 50%) .
 
 ## Stack Technique
-*   **Framework** : React.js (Vite)
-*   **Langage** : JavaScript (ES6+)
-*   **Style** : Tailwind CSS (Responsive Design)
+*   **Framework** : React.js 
+*   **Langage** : JavaScript 
+*   **Style** : CSS3 
 *   **Gestion d'état** : React Context API
 *   **Navigation** : React Router 6
-*   **Client API** : Axios
-*   **Icônes** : Lucide React
+*   **Client API** : fetch
+
 
 ## Workflow de l'application
 
@@ -67,7 +66,7 @@ sequenceDiagram
     end
 ```
 
-## 🚀 Installation
+##  Installation
 
 ### Prérequis
 *   Node.js (v18+)
@@ -144,6 +143,7 @@ Retention_RH_Platform_Frontend/
 │   │   │       ├── Generate.jsx
 │   │   │       └── Generate.css
 │   │   │
+│   │   ├── App.css    
 │   │   ├── App.jsx              # Routing et Providers
 │   │   ├── main.jsx             # Point d'entrée
 │   │   └── index.css            # Styles globaux (CSS)
