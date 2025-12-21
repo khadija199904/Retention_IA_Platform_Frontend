@@ -127,39 +127,27 @@ L'interface gère les codes erreurs renvoyés par le backend :
 Retention_RH_Platform_Frontend/
 ├── retentionRH-app/
 │   ├── src/
-│   │   ├── assets/              # Logos, images, polices, icônes (SVG)
-│   │   ├── api/                 # Configuration Axios / Services d'appels API
-│   │   │   └── axiosConfig.js
-│   │   │   └── authService.js
-│   │   │   └── aiService.js
+│   │   ├── assets/              # Logos, images, polices, icônes 
 │   │   │
 │   │   ├── components/          # Composants UI atomiques et réutilisables
-│   │   │   ├── common/          # Boutons, Inputs, Spinners génériques
-│   │   │   ├── layout/          # Navbar, Sidebar, Footer
-│   │   │   └── auth/            # Composants spécifiques à l'auth (LogoutButton, etc.)
+│   │   │   ├── EmployeeForm/         
+│   │   │   └── Logoutbutton/            
 │   │   │
-│   │   ├── context/             # Gestion de l'état global (AuthContext, ThemeContext)
-│   │   │   └── AuthContext.jsx
-│   │   │
-│   │   ├── hooks/               # Custom Hooks (ex: useAuth, useFetch)
 │   │   │
 │   │   ├── pages/               # Pages complètes (vues)
 │   │   │   ├── auth/
 │   │   │   │   ├── Login.jsx
 │   │   │   │   ├── Register.jsx
-│   │   │   │   └── AuthLayout.css
-│   │   │   ├── dashboard/       # Exemple : Tableau de bord RH
-│   │   │   │   └── Dashboard.jsx
+│   │   │   │   ├── auth.jsx
+│   │   │   │   └── Auth.css
 │   │   │   └── generate/
 │   │   │       ├── Generate.jsx
 │   │   │       └── Generate.css
 │   │   │
-│   │   ├── utils/               # Fonctions utilitaires (formatage date, calculs)
 │   │   ├── App.jsx              # Routing et Providers
 │   │   ├── main.jsx             # Point d'entrée
-│   │   └── index.css            # Styles globaux (Tailwind ou CSS)
+│   │   └── index.css            # Styles globaux (CSS)
 │   │
-│   ├── .env                     # Variables d'environnement (URL Backend)
 │   ├── Dockerfile
 │   ├── package.json
 │   └── vite.config.js

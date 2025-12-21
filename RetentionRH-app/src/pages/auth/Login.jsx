@@ -30,7 +30,7 @@ const Login = ({ onSwitch }) => {
 
             if (response.ok) {
                 setSuccess("Connexion réussie ! Redirection...");
-                localStorage.setItem('token', result.access_token);
+                localStorage.setItem('token', result.accesstoken);
                 // Petit délai pour laisser l'animation de succès se jouer
                 setTimeout(() => {
                     navigate('/generate');

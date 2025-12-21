@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route,Navigate } from "react-router-dom";
 import Auth  from "./pages/auth/Auth";
 import Predict from "./pages/generate/generate";
 
+
 import './App.css'
 import Generate from "./pages/generate/generate";
 

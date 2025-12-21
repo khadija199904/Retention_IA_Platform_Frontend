@@ -1,16 +1,49 @@
-.form-group-grid {
+/* =========================================
+   ADAPTATION DU STYLE AU CODE EXISTANT
+   ========================================= */
+
+/* 1. Conteneur principal du formulaire (optionnel, pour l'espacement) */
+.professional-form {
+  max-width: 100%;
+}
+
+/* 2. Les Sections (Titre H4) */
+.form-section-header h4 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #880E4F;; /* Couleur primaire pour les titres */
+  margin-bottom: 15px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-section {
+  margin-bottom: 25px;
+}
+
+/* 3. Les Lignes (.form-row remplace .form-group-grid) */
+.form-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: 1fr 1fr; /* Par défaut : 2 colonnes */
   gap: 15px;
   margin-bottom: 20px;
 }
 
-.input-box {
+/* Gestion spécifique pour vos lignes à 3 colonnes */
+.form-row.triple {
+  grid-template-columns: 1fr 1fr 1fr; /* 3 colonnes */
+}
+
+/* 4. Les Champs (.form-field remplace .input-box) */
+.form-field {
   display: flex;
   flex-direction: column;
 }
 
-.input-box label {
+/* Style des Labels */
+.form-field label {
   font-size: 12px;
   font-weight: bold;
   color: #666;
@@ -18,15 +51,27 @@
   text-transform: uppercase;
 }
 
-.input-box input, .input-box select {
+/* Style des Inputs et Selects */
+.form-field input, 
+.form-field select {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 14px;
+  background-color: #fff;
+  outline: none;
+  transition: border-color 0.2s;
 }
 
+.form-field input:focus, 
+.form-field select:focus {
+  border-color: #880E4F;;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* 5. Le Bouton (Classe inchangée) */
 .analyze-btn {
-  background: #4f46e5;
+  background: #880E4F;;
   color: white;
   padding: 12px;
   border: none;
@@ -34,10 +79,25 @@
   cursor: pointer;
   font-weight: bold;
   width: 100%;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s,
+  background 0.2s;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.analyze-btn:hover:not(:disabled) {
+  background: #880E4F;;
 }
 
 .analyze-btn:disabled {
   background: #9ca3af;
   cursor: not-allowed;
+}
+
+/* 6. Responsive (Mobile) */
+@media (max-width: 768px) {
+  .form-row, 
+  .form-row.triple {
+    grid-template-columns: 1fr; /* Tout en 1 colonne sur mobile */
+  }
 }

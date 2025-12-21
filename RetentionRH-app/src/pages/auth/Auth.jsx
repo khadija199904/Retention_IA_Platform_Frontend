@@ -30,7 +30,7 @@ const Auth = () => {
 
         <div className="matrix-footer">
           Powered by <span className="dev-name">Khadija ELAbbioui</span>
-          <span className="cursor"></span>
+          
         </div>
       </div>
     </div>
