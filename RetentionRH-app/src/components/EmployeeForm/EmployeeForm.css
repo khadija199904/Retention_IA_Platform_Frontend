@@ -1,103 +1,200 @@
-/* =========================================
-   ADAPTATION DU STYLE AU CODE EXISTANT
-   ========================================= */
+:root {
+  --primary: #b03cd1;
+  --primary-dark: #de3aed;
+  --primary-light: #a78bfa;
+  
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --success: #10b981;
+  
+  --bg-card: #1e1b2e;
+  --bg-hover: #2e2440;
+  --text-primary: #f3f0ff;
+  --text-secondary: #9ca3af;
+  --border: #373055;
+  --shadow: rgba(0,0,0,0.4);
+}
 
-/* 1. Conteneur principal du formulaire (optionnel, pour l'espacement) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0f0720 0%, #1a0b2e 100%);
+  color: var(--text-primary);
+}
+
+/* =================== FORM CARD =================== */
+.form-card {
+  display: flex;
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 2rem;
+  gap: 2rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 24px var(--shadow);
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* =================== TABS VERTICALES =================== */
+.form-tabs-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 220px;
+}
+
+.form-tabs-vertical button {
+  background: rgba(30,27,46,0.6);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-tabs-vertical button.active-tab,
+.form-tabs-vertical button:hover {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: #fff;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+/* =================== CONTENU FORMULAIRE =================== */
+.form-content {
+  flex: 1;
+}
+
 .professional-form {
-  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-/* 2. Les Sections (Titre H4) */
-.form-section-header h4 {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #880E4F;; /* Couleur primaire pour les titres */
-  margin-bottom: 15px;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 5px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
+/* =================== SECTION FORMULAIRE =================== */
 .form-section {
-  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-/* 3. Les Lignes (.form-row remplace .form-group-grid) */
+/* ROWS */
 .form-row {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Par défaut : 2 colonnes */
-  gap: 15px;
-  margin-bottom: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
-/* Gestion spécifique pour vos lignes à 3 colonnes */
 .form-row.triple {
-  grid-template-columns: 1fr 1fr 1fr; /* 3 colonnes */
+  grid-template-columns: repeat(3, 1fr);
 }
 
-/* 4. Les Champs (.form-field remplace .input-box) */
+.form-row.full {
+  grid-template-columns: 1fr;
+}
+
+/* FIELDS */
 .form-field {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
-/* Style des Labels */
 .form-field label {
-  font-size: 12px;
-  font-weight: bold;
-  color: #666;
-  margin-bottom: 5px;
-  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
 }
 
-/* Style des Inputs et Selects */
-.form-field input, 
+.form-field input,
 .form-field select {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: 14px;
-  background-color: #fff;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(30,27,46,0.6);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
   outline: none;
-  transition: border-color 0.2s;
 }
 
-.form-field input:focus, 
+.form-field input:focus,
 .form-field select:focus {
-  border-color: #880E4F;;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  border-color: var(--primary);
+  background: rgba(40,35,60,0.8);
+  box-shadow: 0 0 0 3px rgba(139,92,246,0.15);
 }
 
-/* 5. Le Bouton (Classe inchangée) */
-.analyze-btn {
-  background: #880E4F;;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 6px;
+.form-field input:hover,
+.form-field select:hover {
+  border-color: var(--primary-light);
+}
+
+.form-field select {
   cursor: pointer;
-  font-weight: bold;
-  width: 100%;
-  transition: opacity 0.2s,
-  background 0.2s;
-  margin-top: 10px;
-  font-size: 1rem;
 }
 
-.analyze-btn:hover:not(:disabled) {
-  background: #880E4F;;
+/* =================== BOUTON ANALYSE =================== */
+.analyze-btn {
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(139,92,246,0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.analyze-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(139,92,246,0.6);
 }
 
 .analyze-btn:disabled {
-  background: #9ca3af;
+  opacity: 0.6;
   cursor: not-allowed;
+  transform: none;
 }
 
-/* 6. Responsive (Mobile) */
-@media (max-width: 768px) {
-  .form-row, 
+/* =================== ANIMATIONS =================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* =================== RESPONSIVE =================== */
+@media (max-width: 1024px) {
+  .form-card {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .form-tabs-vertical {
+    flex-direction: row;
+    overflow-x: auto;
+    min-width: auto;
+  }
+
+  .form-tabs-vertical button {
+    flex: 1;
+    white-space: nowrap;
+  }
+
+  .form-row,
   .form-row.triple {
-    grid-template-columns: 1fr; /* Tout en 1 colonne sur mobile */
+    grid-template-columns: 1fr;
   }
 }
